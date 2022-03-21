@@ -19,6 +19,7 @@ h1,h2,h3,h4,h5,h6{
   margin: 50;
   padding: 50;
   text-align: left;
+  font-size: 100%;
 }
 li,ol{
   list-style: none;
@@ -42,6 +43,7 @@ p {
   align-items: center; /* 中の要素を上下中央に並べる */
   z-index:10; /* 一番上にヘッダーが来る */
   text-align: center;
+  font-size: 90%;
 }
 header .gnav .menu {
   display: flex; /* 中の要素を横並びにする */
