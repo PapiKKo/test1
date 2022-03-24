@@ -1,0 +1,282 @@
+@media screen and (max-width:767px) {
+  /*　モバイル用の設定を記述　*/
+  h1,h2,h3,h4,h5,h6{
+    margin: 1%;
+    padding: 0%;
+    text-align: left;
+  }
+  h1{
+    font-size: 100%;
+  }
+  h2{
+    font-size: 95%;
+  }
+  h3{
+    font-size: 90%;
+  }
+  h4{
+    font-size: 85%;
+  }
+  h5{
+    font-size: 80%;
+  }
+  h6{
+    font-size: 75%;
+  }
+  .menu-btn {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    height: 6px;
+    width: 6px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: black;
+  }
+  .menu-btn:hover {
+    cursor: pointer;
+  }
+  /* 三本線の実装 */
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: "";
+    display: block;
+    height: 0.3px;
+    width: 2.5px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+  }
+  .menu-btn span:before {
+    bottom: 8px;
+  }
+  .menu-btn span:after {
+    top: 8px;
+  }
+  h1,h2,h3,h4,h5,h6{
+    margin: 10;
+    padding: 10;
+    text-align: left;
+  }
+  footer .address {
+    font-size: 40%;
+  }
+  footer .copyright {
+    font-size: 30%;
+    text-align: center;
+  }
+}
+@media (min-width: 768px){
+ 
+  /*タブレット・PC用の設定を記述*/
+  header .gnav .menu {
+    display: flex; /* 中の要素を横並びにする */
+  }
+  footer .address {
+    font-size: 80%;
+  }
+  footer .copyright {
+    font-size: 65%;
+    text-align: center;
+  }
+}
+
+
+@charset "UTF-8";
+
+
+html {
+  font-family: sans-serif;
+  size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0%; /* マージンを追記 */
+}
+body {
+  padding-top: 90px; /* ヘッダーの後ろに要素が隠れないようにするため */
+  /*padding-left: 30px;
+  padding-right: 30px;*/
+  margin: 0px;
+  /*padding: 50px 10px 50px 10px; /* bodyの内側余白を指定する(上:右:下:左) */
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 1%;
+  padding: 0%;
+  text-align: left;
+}
+li,ol{
+  list-style: none;
+  -webkit-box-align: center; /* safari, Chrome対応 */
+  -moz-box-align: center;    /* Firefox対応 */
+  -o-box-align: center;      /* Opera対応 */
+  -ms-box-align: center;     /* IE対応 */
+  box-align: center;
+}
+p {
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+}
+a {
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  /*border-top: solid 0.5px rgba(255, 255, 255, 0.6);	/*リストの境目に白線 */
+}
+* {
+  box-sizing: border-box;
+  float: none;
+	position: static;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+ul {
+  flex-direction: column;	/*ulのflexboxを縦並びにする*/  
+}
+
+
+.header {
+  width: 100%; /* 幅いっぱいを指定 */
+  height: 80px; /* 高さを80pxに指定 */
+  background-color:rgba(255, 255, 255, 0.8); /* 背景色を指定 */
+  color: #0000ff;
+  /*padding: 10px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+  box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+  position: fixed; /* ウィンドウを基準に画面に固定 */
+  top: 0; /* 上下の固定位置を上から0pxにする */
+  left: 0; /* 左右の固定位置を左から0pxにする */
+  display: flex; /* 中の要素を横並びにする */
+  align-items: center; /* 中の要素を上下中央に並べる */
+  z-index:10; /* 一番上にヘッダーが来る */
+  text-align: center;
+  font-size: 90%;
+  display: inline-block;
+}
+header .gnav .menu {
+  display: flex; /* 中の要素を横並びにする */
+}
+.footer{
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 0%; /* マージンで横にはみ出した部分を戻す */
+  bottom: 0; /*下に固定*/
+  left: 0; /* 左右の固定位置を左から0pxにする */
+  text-align: left;
+  position: relative;
+  display: block;
+  margin: 0%; /* マージンを追記 */
+  color: #000000;
+}
+footer .inner{
+  position: relative;
+  margin: 0%;
+  color: #000000;
+  padding: 30px auto;
+}
+footer .address {
+  font-size: 80%;
+  color: #333;
+  text-align: left;
+  padding: 0%;
+}
+footer .copyright {
+  font-size: 65%;
+  text-align: center;
+}
+ul {
+  overflow:hidden;
+  list-style:none;
+  margin: 0 auto;
+  z-index: 20;
+}
+ul li {
+  display: inline-block;
+  /*padding: 26px 10px 20px 10px;*/
+  -webkit-box-align: center; /* safari, Chrome対応 */
+  -moz-box-align: center;    /* Firefox対応 */
+  -o-box-align: center;      /* Opera対応 */
+  -ms-box-align: center;     /* IE対応 */
+  box-align: center;         /* ベンダープレフィックス無しも併記する */
+}
+.btn4{ /* class="btn4"で指定した時のデザイン */
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  /*display:inline-block;*/
+  color: #000000; /* 文字の色指定 */
+}
+ /*
+.btn4::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  color: #00ff00;
+  display: block;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+}
+ */
+.btn2{ /* class="btn2"で指定した時のデザイン */
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  /*display:inline-block;*/
+  border-bottom: 2px solid #000000;
+  color: #ff0000; /* 文字の色指定 */
+}
+
+.newsList {
+  width: 100%;
+  margin: 0 auto;
+}
+.newsList li {
+  border-top: 1px solid #e5e5e5;
+}
+.newsList li .article {
+  display: table;
+  width: 100%;
+}
+.newsList li .article .cell {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 18px 0;
+}
+
+.newsList li .article .cell .catLabel {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.newsList li .article .cell .date {
+  font-size: 80%;
+  padding: 5px 5px;
+  width: 10px;
+  color: #000fff;
+}
+.newsList li a {
+  color: #333;
+}
+.newsList li:first-child {
+  border-top: none;
+}
