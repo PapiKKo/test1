@@ -280,3 +280,28 @@ ul li {
 .newsList li:first-child {
   border-top: none;
 }
+
+    <header>
+        <div class="header">
+            <!--   ボタンが押されたかどうかをチェックボックスで判断する -->
+                <input type="checkbox" id="menu-btn-check">
+          <!--     ハンバーガーボタン -->
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--メニュー-->
+                <div class="menu-content">
+                    <ul>
+                        <li>
+                            <a href="home_index.html">Top</a>
+                        </li>
+                        <li>
+                            <a href="About/about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="News/news.html">News</a>
+                        </li>
+                        <li>
+                            <a href="Services/services.html">Services</a>
+                        </li>
+                    </ul>
+                </div>
+    </header>
