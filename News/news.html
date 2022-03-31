@@ -8,16 +8,36 @@
     <link rel="stylesheet" href="../home_index.css" type="text/css">
 </head>
 <body>
-    <header><div class="header">
-        <nav class="gnav">
-            <ul class="menu">
-                <li><a href="../home_index.html" class="btn4">Exploratrium</a></li>
-                <li><a href="../About/about.html" class="btn4">ABOUT</a></li>
-                <li><a href="../News/news.html" class="btn2">NEWS</a></li>
-                <li><a href="../Services/services.html" class="btn4">SERVICES</a></li>
-            </ul>
-        </nav></div>
+    <header>
+        <div class="header"><!--pcヘッダー-->
+            <nav class="gnav">
+                <ul class="menu">
+                    <!--<li><a href="home_index.html"><img src="./spaceship_testLOGO2.png" alt="Exploratriumのロゴ画像" title="仮ロゴ"></a></li>-->
+                    <li><a href="../home_index.html" class="btn4">Top</a></li>
+                    <li><a href="../About/about.html" class="btn4">ABOUT</a></li>
+                    <li><a href="../News/news.html" class="btn2">NEWS</a></li>
+                    <li><a href="../Services/services.html" class="btn4">SERVICES</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hamburger-menu"><!--スマホヘッダー-->
+            <!--   ボタンが押されたかどうかをチェックボックスで判断する -->
+                <input type="checkbox" id="menu-btn-check">
+          <!--     ハンバーガーボタン -->
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--メニュー-->
+                <div class="menu-content">
+                    <ul>
+                        <li><a href="home_index.html" class="btn2">Top</a></li>
+                        <li><a href="About/about.html" class="btn4">ABOUT</a></li>
+                        <li><a href="News/news.html" class="btn4">NEWS</a></li>
+                        <li><a href="Services/services.html" class="btn4">SERVICES</a></li>
+                        </ul>
+                </div>
+                <!--メニュー　end-->
+            </div>
     </header>
+
     <h1>News</h1>
     <ul class="newsList">
         <li>
@@ -38,13 +58,21 @@
     </ul>
     <a href="./News/news.html" text-aligh:right;>see all news</a>
     <footer><div class="footer">
-        <p>株式会社ブルーバドソン<br>神奈川県横浜市西区みなとみらい4-4-2<br>横浜ブルーアベニュー12F 1213<br>Tel 045-274-4569</p>
-        <nav><!--hrefの後を各SNSのURLに変更-->
-        <a href="index.html">twitter</a>
-        <a href="menu01.html">instagram</a>
-        <a href="menu02.html">facebook</a>
-        </nav>
-        <p class="copyright">Copyright © 2022 bluebirdsong</p>
+        <dl>
+            <dt class="inner"><b>SNS</b>
+                <dd>
+                    <ul>
+                        <nav><!--hrefの後をそれぞれinstagrum/facebookのURLに変更-->
+                            <li><a href="https://twitter.com/Exploratrium22?t=uRhGw4Z1BTsDuga1cNd85Q&s=03" target="_blank">twitter</a></li>
+                            <li><a href="menu01.html" target="_blank">instagram</a></li>
+                            <li><a href="menu02.html" target="_blank">facebook</a></li>
+                        </nav>
+                    </ul>
+                </dd>
+            </dt>
+        </dl>
+        <p class="address">株式会社ブルーバドソン<br>神奈川県横浜市西区みなとみらい4-4-2<br>横浜ブルーアベニュー12F 1213<br>Tel 045-274-4569</p>
+        <p class="copyright">Copyright © 2022 bluebirdsong, Inc.</p>
     </div>
     </footer>
 </body>
