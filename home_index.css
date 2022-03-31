@@ -40,6 +40,9 @@ a {
   /*text-align: center;
   /*border-top: solid 0.5px rgba(255, 255, 255, 0.6);	/*リストの境目に白線 */
 }
+.about {
+  margin: 2%;
+}
 /*
 * {
   box-sizing: border-box;
@@ -54,26 +57,174 @@ ul {/*
   flex-direction: column;	/*ulのflexboxを縦並びにする*/  /*
 }
 */
-
-.header {
-  width: 100%; /* 幅いっぱいを指定 */
-  height: 80px; /* 高さを80pxに指定 */
-  background-color:rgba(255, 255, 255, 0.8); /* 背景色を指定 */
-  color: #0000ff;
-  /*padding: 10px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
-  box-sizing: border-box; /* padding分を含んで幅を100%にするため */
-  position: fixed; /* ウィンドウを基準に画面に固定 */
-  top: 0; /* 上下の固定位置を上から0pxにする */
-  left: 0; /* 左右の固定位置を左から0pxにする */
-  display: flex; /* 中の要素を横並びにする */
-  align-items: center; /* 中の要素を上下中央に並べる */
-  z-index:10; /* 一番上にヘッダーが来る */
-  text-align: center;
-  font-size: 90%;
-  /*display: inline-block;*/
+@media screen and (max-width:480px){
+  .header{
+    height: 40px;
+    display: none;
+  }
+  h1 {
+    font-size: 150%;
+  }
+  h2 {
+    font-size: 125%;
+  }
+  .menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: black;
+  }
+  .menu-btn:hover {
+    cursor: pointer;
+  }
+  /* 三本線の実装 */
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+  }
+  .menu-btn span:before {
+    bottom: 8px;
+  }
+  .menu-btn span:after {
+    top: 8px;
+  }
+  /* チェックボックスを非表示にする */
+  #menu-btn-check {
+    display: none;
+  }
+   
+  #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0
+    ); /*メニューオープン時は真ん中の線を透明にする*/
+  }
+   
+  /* メニューを開いている時はハンバーガーボタンが×になる */
+  #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  メニューの表示・非表示を指定する
+  CSS
+  /* =================
+  メニュー部分の実装
+  ================= */
+  
+  .menu-content {
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+     /* メニューを外に出しておく */
+    left: 100%;
+  
+    z-index: 80;
+    background-color: black;
+    transition: all 0.5s; /*アニメーションを滑らかにする*/
+  }
+  .menu-content ul {
+    padding: 70px 10px 0;
+  }
+  .menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+  }
+  .menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+  
+  #menu-btn-check:checked ~ .menu-content {
+    left: 30%; /*メニューを画面内へ動かす*/
+  }
+  /* =================
+  メニュー部分の実装
+  ================= */
+   
+  .menu-content {
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+     /* メニューを外に出しておく */
+    left: 100%;
+   
+    z-index: 80;
+    background-color: black;
+    transition: all 0.5s; /*アニメーションを滑らかにする*/
+  }
+  .menu-content ul {
+    padding: 70px 10px 0;
+  }
+  .menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+  }
+  .menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+   
+  #menu-btn-check:checked ~ .menu-content {
+    left: 30%; /*メニューを画面内へ動かす*/
+  }
 }
-header .gnav .menu {
-  display: flex; /* 中の要素を横並びにする */
+@media screen and (min-width:481px){
+  .hamburger-menu {
+    display: none;
+  }
+  .header {
+    width: 100%; /* 幅いっぱいを指定 */
+    height: 80px; /* 高さを80pxに指定 */
+    background-color:rgba(255, 255, 255, 0.8); /* 背景色を指定 */
+    color: #0000ff;
+    /*padding: 10px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    display: flex; /* 中の要素を横並びにする */
+    align-items: center; /* 中の要素を上下中央に並べる */
+    z-index:10; /* 一番上にヘッダーが来る */
+    text-align: center;
+    font-size: 90%;
+    /*display: inline-block;*/
+  }
+  header .gnav .menu {
+    display: flex; /* 中の要素を横並びにする */
+  }
 }
 .footer{
   width: 100%;
@@ -86,12 +237,13 @@ header .gnav .menu {
   text-align: left;
   position: relative;
   display: block;
-  margin: 0%; /* マージンを追記 */
   color: #000000;
 }
 footer .inner{
   position: relative;
-  margin: 0%;
+  margin: 1%;
+  padding: 0%;
+  text-align: left;
   color: #000000;
   padding: 30px auto;
 }
@@ -100,6 +252,7 @@ footer .address {
   color: #333;
   text-align: left;
   padding: 0%;
+  margin: 1%;
 }
 footer .copyright {
   font-size: 65%;
@@ -160,7 +313,6 @@ ul li {
 }
 
 .newsList {
-  width: 100%;
   margin: 0 auto;
 }
 .newsList li {
