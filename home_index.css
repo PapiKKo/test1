@@ -278,9 +278,18 @@ ul li {
   text-align: center;
   position: relative;
   text-decoration: none;
-  /*display:inline-block;*/
+  display:inline-block;
+  /*display: table;*/
   color: #000000; /* 文字の色指定 */
 }
+.btn4_logo{ /* class="btn4"で指定した時のデザイン */
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  /*display:inline-block;*/
+}
+
  /*
 .btn4::before {
   content: '';
@@ -307,11 +316,19 @@ ul li {
   text-align: center;
   position: relative;
   text-decoration: none;
-  /*display:inline-block;*/
+  display:inline-block;
   border-bottom: 2px solid #000000;
   color: #ff0000; /* 文字の色指定 */
 }
-
+.btn2_logo{ /* class="btn2_logo"で指定した時のデザイン */
+  position: relative;
+  text-decoration: none;
+  /*display:inline-block;*/
+  width:40px;  /* 横幅のサイズを指定    */
+  height: 40px;  /* 縦幅のサイズを指定    */
+  object-fit: cover;
+  /*display: table;*/
+}
 .newsList {
   margin: 0 auto;
 }
