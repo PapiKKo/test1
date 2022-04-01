@@ -8,16 +8,34 @@
     <link rel="stylesheet" href="../home_index.css" type="text/css">
 </head>
 <body>
-    <header><div class="header">
-        <nav class="gnav">
-            <ul class="menu">
-                <!--<li><a href="home_index.html"><img src="./spaceship_testLOGO2.png" alt="Exploratriumのロゴ画像" title="仮ロゴ"></a></li>-->
-                <li><a href="../home_index.html" class="btn4">Exploratrium</a></li>
-                <li><a href="../About/about.html" class="btn4">ABOUT</a></li>
-                <li><a href="../News/news.html" class="btn2">NEWS</a></li>
-                <li><a href="../Services/services.html" class="btn4">SERVICES</a></li>
-            </ul>
-        </nav></div>
+   <header>
+        <div class="header"><!--pcヘッダー-->
+            <nav class="gnav">
+                <ul class="menu">
+                    <!--<li><a href="home_index.html"><img src="./spaceship_testLOGO2.png" alt="Exploratriumのロゴ画像" title="仮ロゴ"></a></li>-->
+                    <li><a href="../home_index.html" class="btn4">Top</a></li>
+                    <li><a href="../About/about.html" class="btn4">ABOUT</a></li>
+                    <li><a href="../News/news.html" class="btn2">NEWS</a></li>
+                    <li><a href="../Services/services.html" class="btn4">SERVICES</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hamburger-menu"><!--スマホヘッダー-->
+            <!--   ボタンが押されたかどうかをチェックボックスで判断する -->
+                <input type="checkbox" id="menu-btn-check">
+          <!--     ハンバーガーボタン -->
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--メニュー-->
+                <div class="menu-content">
+                    <ul>
+                        <li><a href="../home_index.html" class="btn2">Top</a></li>
+                        <li><a href="../About/about.html" class="btn4">ABOUT</a></li>
+                        <li><a href="../News/news.html" class="btn4">NEWS</a></li>
+                        <li><a href="../Services/services.html" class="btn4">SERVICES</a></li>
+                        </ul>
+                </div>
+                <!--メニュー　end-->
+            </div>
     </header>
     <div class="container">
         <div class="sample">
